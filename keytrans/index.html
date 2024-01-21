@@ -96,7 +96,7 @@ G#7        C#   Bbm7 C7  F7      Bbm
         <!-- 異名同音(option) -->
         <tr>
         <td align="left" valign="top">
-            Option(異名同音)
+            Option（異名同音）
             <br>
             <table class="samename" border="1">
                 <tr>
@@ -185,9 +185,9 @@ G#7        C#   Bbm7 C7  F7      Bbm
         //------------------------------------------------
         // textareaの高さを画面サイズによって自動でリサイズする。
         //------------------------------------------------
-        //var header_bottom_size = 182; //ヘッダとフッタの高さの合計(広告なし)
-        //var header_bottom_size = 256; //ヘッダとフッタの高さの合計(広告あり)
-        var header_bottom_size = 280; //ヘッダとフッタの高さの合計(広告あり)
+        let header_bottom_size = 182; //ヘッダとフッタの高さの合計(広告なし)
+        //let header_bottom_size = 256; //ヘッダとフッタの高さの合計(広告あり)
+        //let header_bottom_size = 280; //ヘッダとフッタの高さの合計(広告あり)
         $(document).ready(function () {
             hsize = $(window).innerHeight() - header_bottom_size;
             $("textarea").css("height", hsize + "px");
@@ -200,7 +200,7 @@ G#7        C#   Bbm7 C7  F7      Bbm
         // textareaのfontサイズを大小する。
         //------------------------------------------------
         function textarea_fontsize(up_down) {
-            var cur_size = Number($("textarea").css("fontSize").split("px")[0]);
+            let cur_size = Number($("textarea").css("fontSize").split("px")[0]);
             if(up_down == "up"){
                 cur_size += 2;
             } else{
@@ -215,13 +215,13 @@ G#7        C#   Bbm7 C7  F7      Bbm
         //------------------------------------------------
         function keytrans_bind(up_down) {
             // 異名同音を取得する。
-            var Cs_str = $('input[name=Cs_g]:checked').val();
-            var Ef_str = $('input[name=Ef_g]:checked').val();
-            var Fs_str = $('input[name=Fs_g]:checked').val();
-            var Gs_str = $('input[name=Gs_g]:checked').val();
-            var Bf_str = $('input[name=Bf_g]:checked').val();
+            let Cs_str = $('input[name=Cs_g]:checked').val();
+            let Ef_str = $('input[name=Ef_g]:checked').val();
+            let Fs_str = $('input[name=Fs_g]:checked').val();
+            let Gs_str = $('input[name=Gs_g]:checked').val();
+            let Bf_str = $('input[name=Bf_g]:checked').val();
             // textareaのコード譜を移調し、結果をtextareaに上書きする。
-            var new_str = keytrans(document.fmt.elements[0].value, up_down,
+            let new_str = keytrans(document.fmt.elements[0].value, up_down,
                 Cs_str, Ef_str, Fs_str, Gs_str, Bf_str);
             document.fmt.elements[0].value = new_str;
         }

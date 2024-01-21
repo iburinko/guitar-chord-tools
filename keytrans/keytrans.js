@@ -5,11 +5,11 @@
 //------------------------------------------------------------------------
 // global value
 //------------------------------------------------------------------------
-var regexp_all;
-var regexp_slash;
-var regexp_tate;
-var regexp_on;
-var regexp_chord;
+let regexp_all;
+let regexp_slash;
+let regexp_tate;
+let regexp_on;
+let regexp_chord;
 
 //------------------------------------------------------------------------
 // init
@@ -28,7 +28,7 @@ function init(){
 //------------------------------------------------------------------------
 function on_tokenizer(delimiter, regexp, in_array, out_array){
   for(ini in in_array){
-    var t_s = in_array[ini].split(regexp);
+    let t_s = in_array[ini].split(regexp);
     if(t_s.length == 1){
       //console.debug(t_s[0]);
       out_array.push(t_s[0]);
@@ -51,7 +51,7 @@ function on_tokenizer(delimiter, regexp, in_array, out_array){
 //   C - C#(Db) - D - Eb(D#) - E - F - F#(Gb) - G - G#(Ab) - A - Bb(A#) - B
 //------------------------------------------------------------------------
 function trans(in_key, up_down, Cs_str, Ef_str, Fs_str, Gs_str, Bf_str){
-  var out_key = "";
+  let out_key = "";
   if       (in_key == "C"){
     if(up_down == "up"){ out_key = Cs_str;}
     else {               out_key = "B";}
@@ -122,35 +122,35 @@ function keytrans(str, up_down, Cs_str, Ef_str, Fs_str, Gs_str, Bf_str){
   //console.debug(str);
 
   //スペース区切りでtokenを切り出す。
-  var in_tokens = str.match(regexp_all);
+  let in_tokens = str.match(regexp_all);
   //console.debug("----print in_tokens----");
   //console.debug(in_tokens);
 
   //tokenをさらに分割する。
   //console.debug("----start divide tokens ----");
   //"/"区切りでtokenを分割する。
-  var s_tokens = new Array();
+  let s_tokens = new Array();
   on_tokenizer("/", regexp_slash, in_tokens, s_tokens);
   //console.debug("s_tokens>" + s_tokens);
   //"|"区切りでtokenを分割する。
-  var t_tokens = new Array();
+  let t_tokens = new Array();
   on_tokenizer("|", regexp_tate, s_tokens, t_tokens);
   //console.debug("t_tokens>" + t_tokens);
   //"on"区切りでtokenを分割する。
-  var o_tokens = new Array();
+  let o_tokens = new Array();
   on_tokenizer("on", regexp_on, t_tokens, o_tokens);
   //console.debug("o_tokens>" + o_tokens);
 
   //tokenがコードかどうか判定し、コードであればkeyの部分を移調する(書き換える)。
-  var out_str = "";
+  let out_str = "";
   //console.debug("----check chord----");
   tokens = o_tokens;
   for(ti in tokens){
-    var chord = tokens[ti].match(regexp_chord);
+    let chord = tokens[ti].match(regexp_chord);
     if(chord && chord.length >= 2){ //コード
-      var key = chord[1];
-      var new_key = trans(key, up_down, Cs_str, Ef_str, Fs_str, Gs_str, Bf_str); //移調する。
-      var new_chord = tokens[ti].replace(key, new_key); //コードのキー部分を移調したKeyに書き換える。
+      let key = chord[1];
+      let new_key = trans(key, up_down, Cs_str, Ef_str, Fs_str, Gs_str, Bf_str); //移調する。
+      let new_chord = tokens[ti].replace(key, new_key); //コードのキー部分を移調したKeyに書き換える。
 /*
       console.debug("chord=> " + chord[0] + 
                     ", key=>" + key + 
@@ -174,12 +174,12 @@ function keytrans(str, up_down, Cs_str, Ef_str, Fs_str, Gs_str, Bf_str){
 function test(){
   init();
 
-  var out_str = "";
-  var Cs_str = "C#";
-  var Ef_str = "Eb";
-  var Fs_str = "F#";
-  var Gs_str = "G#";
-  var Bf_str = "Bb";
+  let out_str = "";
+  let Cs_str = "C#";
+  let Ef_str = "Eb";
+  let Fs_str = "F#";
+  let Gs_str = "G#";
+  let Bf_str = "Bb";
 
   console.debug("======== test1 ========");
   str = "よよ　GM7 B/D Cm|A \n EonG#	(G) [Cdim] | [ ]";
