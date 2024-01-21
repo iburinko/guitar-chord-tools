@@ -1,0 +1,135 @@
+/* master.css */
+BODY {
+	color : #000000;
+	background-color : #fffff5;
+	font-size : 14px;
+	margin-left  : 10pt;
+	margin-right : 10pt
+}
+
+h1 {
+	font-size : 100%;
+/*	margin-left : 20pt; */
+	margin : 0pt 0pt 0pt 20pt;
+	padding : 0px;
+	font-weight : normal;
+}
+
+.small-font{
+	font-size : 75%;
+}
+.small-small-font{
+	font-size : 50%;
+}
+
+A:link    { color : #600030 } /* unvisited links */
+A:visited { color : #600030 }
+A:active  { color : #686895 }
+
+.top-headder {
+/*
+	font-family: 'Impact', 'arial black', 'Tahoma', sans-serif;
+	font-family: 'Tahoma', sans-serif;
+*/
+	color : #fffff5;
+	background-color : #705666;
+	font-size : 24px;
+/*
+	font-size : 150%;
+	font-size : 32px;
+	padding-top : 2px;
+	padding-bottom : 2px;
+*/
+	padding-left : 2px;
+/*	border : none; */
+/*	border-width : 5px 10px 5px 10px; */
+/*
+	border-top : solid #705666 2px;
+	border-left: solid #705666 15px;
+	border-bottom : solid #705666 0px;
+*/
+	border-right : solid #705666 5px;
+	line-height : 60px
+}
+.top-date {
+	font-size : 16px;
+	text-align : right;
+}
+
+.ent-headder {
+/*	font-family: 'Tahoma', sans-serif;  */
+	color : black;
+	background-color : #e8e7db;
+	font-size : 32px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	padding-left : 10px;
+/*	border : none; */
+/*	border-width : 5px 10px 5px 10px; */
+/*
+	border-top : solid #e8e7db 2px;
+	border-left: solid #e8e7db 15px;
+	border-right : solid #e8e7db 5px;
+	border-bottom : solid #e8e7db 0px;
+*/
+}
+
+.section-headder {
+	color : black;
+	background-color : #e8e7db;
+	font-size : 18px;
+	font-weight : bold;
+	padding-top : 4px;
+	padding-bottom : 4px;
+	padding-left : 5px;
+/*	border : none; */
+/*	border-width : 5px 10px 5px 10px; */
+/*	border-top : solid #e8e7db 2px; */
+	border-left: solid #a9b4bc 15px;
+	border-right : solid #e8e7db 5px;
+/*	border-bottom : solid #e8e7db 0px; */
+}
+.section-date {
+	font-size : 14px;
+	text-align : right;
+}
+.section-margin1 {
+	margin-left : 20pt;
+	margin-right : 20pt;
+}
+.section-margin2 {
+	margin-left : 35pt;
+	margin-right : 20pt;
+}
+.section-sample {
+	color : #000000;
+	background-color : #f5f7e0;
+	border : dotted;
+	border-width : thin;
+/*	font-family : monospace; */
+	font-size : 14px;
+	white-space : pre;
+	margin-left : 35pt;
+	margin-right : 35pt
+}
+.section-songbook-sample {
+	color : #000000;
+	background-color : #f5f7e0;
+	border : dotted;
+	border-width : thin;
+/*	font-family : monospace; */
+	font-size : 14px;
+	white-space : pre;
+	margin-left : 12pt;
+	margin-right : 12pt;
+	padding : 12px
+}
+
+IMG.google-right {
+	float : right;
+	clear : none
+}
+IMG.google-left {
+	float : left;
+/*	clear : none */
+}

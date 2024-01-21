@@ -1,0 +1,23 @@
+2019/05/11
+  * 引っ越し。ボタンバグ対応。ボタンサイズ変更。
+
+2016/11/15
+  * サンプルコード譜に使い方を追記。
+
+2016/11/07
+  * $(window).height() -> $(window).innerHeight()
+
+2016/11/04
+  * apply font size change.
+
+2016/11/02
+  * use jQuery. dynamic change text area size.
+
+2016/11/01
+  * change footer design. add advert.
+
+2016/10/29
+  * change design
+
+2016/10/27
+  * OK => FireFox49.0.2, Chrome54.0.2840.71, Microsoft Edge, IE11
